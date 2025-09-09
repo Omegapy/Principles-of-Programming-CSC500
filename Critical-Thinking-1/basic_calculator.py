@@ -10,7 +10,7 @@
 # Fall C-2025
 # Sep.-Nov. 2025
 # ------------------------------------------------------------------------
-# Assignement:
+# Assignment:
 # Critical Thinking Assignment 1
 #
 # Directions:
@@ -27,10 +27,10 @@
 # ------------------------------------------------------------------------
 
 # --- Module Functionality---
-#   It is simple calculator consisting of two parts:
-#   Part 1 (addition/subtraction) and Part 2 (multiplication/division). The
-#   basic input validation, formatted console output using
-#   box-drawing characters, and a menu.
+# The program is a simple calculator consisting of two parts.  
+# Part 1 (addition/subtraction) and Part 2 (multiplication/division).  
+# It uses basic input validation, formats console output using box-drawing characters, 
+# and implements a menu.
 # -------------------------------------------------------------------------
 
 # --- Module Contents Overview ---
@@ -92,8 +92,8 @@ results_header = '''
 def wait_for_enter() -> None:
     """Pause execution until the user presses Enter.
 
-    This function is a small UX helper that allows the user time to read
-    the previous screen before continuing.
+    This helper function allows the user time to read
+    the screen before continuing.
 
     Args:
         None
@@ -102,18 +102,17 @@ def wait_for_enter() -> None:
         None
 
     Side Effects:
-        Blocks execution awaiting user input.
+        Awaiting user input.
     """
     input("\n        Press Enter to continue...")
 # --------------------------------------------------------------------------------- end wait_for_enter()
 
-
 # --------------------------------------------------------------------------------- get_two_numbers()
 def get_two_numbers() -> tuple[float, float]:
-    """Prompt the user until two valid floating-point numbers are entered.
+    """Prompt the user to enter 2 floating-point numbers and capture them.
 
-    The function loops to validate numeric input for both requested values.
-    It handles `ValueError` internally and re-prompts on invalid input.
+    The function loops until valid numeric input are entered.
+    It uses `ValueError` to check iinputs.
 
     Args:
         None
@@ -122,8 +121,7 @@ def get_two_numbers() -> tuple[float, float]:
         tuple[float, float]: A pair (num1, num2) entered by the user.
 
     Notes:
-        Input is converted using `float(...)`. Locale-specific number formats
-        are not supported (e.g., commas as decimal separators).
+        The inputs are converted using `float(...)`. 
     """
     # Get first number
     while True:
@@ -144,28 +142,26 @@ def get_two_numbers() -> tuple[float, float]:
     return num1, num2
 # --------------------------------------------------------------------------------- end get_two_numbers()
 
-
 # =========================================================================
 # Part 1 Operations (Addition & Subtraction)
 # =========================================================================
 
 # --------------------------------------------------------------------------------- addition_subtraction()
 def addition_subtraction() -> None:
-    """Part 1: Compute and display addition and subtraction for two numbers.
+    """Part 1: Compute and display results of the addition and subtraction operations
 
     Workflow:
-      1) Display section header.
-      2) Capture two valid numbers via `get_two_numbers()`.
-      3) Compute addition and subtraction.
-      4) Render results with a formatted results header.
-      5) Pause using `wait_for_enter()`.
-
+      1) Displays section header
+      2) Captures two numbers using `get_two_numbers()`
+      3) Computes addition and subtraction
+      4) Displays results
+      
     Args:
         None
     Returns:
         None
     Side Effects:
-        Prints results to stdout and waits for user input to continue.
+        Prints results to stdout and waits for user input to continue
     """
     header_part1 = '''
         ┌────────────────────────────────────┐
@@ -189,23 +185,21 @@ def addition_subtraction() -> None:
     wait_for_enter()
 # --------------------------------------------------------------------------------- end addition_subtraction()
 
-
 # =========================================================================
 # Part 2 Operations (Multiplication & Division)
 # =========================================================================
 
 # --------------------------------------------------------------------------------- multiplication_division()
 def multiplication_division() -> None:
-    """Part 2: Compute and display multiplication and division for two numbers.
+    """Part 2: Computes and displays multiplication and division operations for two numbers
 
-    Division by zero is handled by showing am 'error' descriptive message.
+    Division by zero is handled by showing an 'error' descriptive message.
 
     Workflow:
-      1) Display section header.
-      2) Capture two valid numbers via `get_two_numbers()`.
-      3) Compute multiplication and division.
-      4) Render results with a formatted results header.
-      5) Pause using `wait_for_enter()`.
+      1) Displays section header
+      2) Captures two numbers using `get_two_numbers()`
+      3) Computes multiplication and division operations
+      4) Displays results with a formatted results header
       
     Args:
         None
@@ -244,7 +238,6 @@ def multiplication_division() -> None:
     wait_for_enter()
 # --------------------------------------------------------------------------------- end multiplication_division()
 
-
 # =========================================================================
 # Program Entry / Menu Loop
 # =========================================================================
@@ -265,8 +258,8 @@ def main() -> None:
         None
         
     Side Effects:
-        Prints a menu, reads user input, dispatches to the appropriate part,
-        and loops until the user selects Exit.
+        Prints a menu, caputers user input, runs the operations,
+        and loops until the user exits
     """
     print(header)
     
@@ -294,10 +287,9 @@ def main() -> None:
             wait_for_enter()
 # --------------------------------------------------------------------------------- end main()
 
-
 # __________________________________________________________________________
 # Module Initialization / Main Execution Guard
-# This block runs only when the file is executed directly (not imported).
+# This codes runs only when the file is executed
 # --------------------------------------------------------------------------------- main_guard
 # Run the program
 if __name__ == "__main__":

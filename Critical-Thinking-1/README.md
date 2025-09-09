@@ -1,7 +1,7 @@
-﻿# Module 1 Critical Thinking 
-Program Name:  
+﻿# Critical Thinking 1
+Program Name: Critical Thinking Assignment 1 – Basic Calculator
 
-Data:  
+Data:  09/14/2025  
 Grade: 
 
 ---
@@ -13,42 +13,42 @@ Student: Alexander (Alex) Ricciardi
 
 ---
 
+**Program Description:**
+
+The program is a simple calculator consisting of two parts.  
+Part 1 (addition/subtraction) and Part 2 (multiplication/division).  
+It uses basic input validation, formats console output using box-drawing characters, and implements a menu.
+
+---
+
 Requirements:  
 [![Python 3.12+](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/downloads/)
 
+---
+
+**Assignment Directions:**  
+
+Creating Python Programs  
+Part 1:  
+Write a Python program to find the addition and subtraction of two numbers.
+
+Ask the user to input two numbers (num1 and num2). Given those two numbers, add them together to find the output. Also, subtract the two numbers to find the output.
+
+Part 2:  
+Write a Python program to find the multiplication and division of two numbers.
+
+Ask the user to input two numbers (num1 and num2). Given those two numbers, multiply them together to find the output. Also, divide num1/num2 to find the output.
+
+Compile and submit your pseudocode, source code, and screenshots of the application executing the code from parts 1 and 2, the results and GIT repository in a single document (Word is preferred).
+
+Note: Refer to the Module 1 Overview for resources and help using GIT
 
 ---
 
-Assignment Directions:  
+**Project Map:**
 
-
-
----
-
-Images if any
-
----
-
-Program Description:
-
-...
-
-⚠️My notes:
-
-....
-
----
-
-Project Map:
-
--	Module 1 Critical Thinking Assignment.docx (App documentation)
-
-
-```
-├── app
-│   ├── main
-
-```
+- Project Report.docx - Contains the source code, the program outputs, and Git repository  screenshots
+- basic_calculator.py - Contains the source code
 
 ---
 
